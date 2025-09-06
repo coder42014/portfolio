@@ -9,17 +9,49 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "cf0e2da5-1474-46f2-8bfe-7b825ded24b4",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: 'Project Collaboration', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
   };
 
   const contactInfo = [
@@ -124,6 +156,20 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
+              {submitStatus === 'success' && (
+                <div className="p-4 rounded-xl bg-green-500/20 border border-green-500/30 text-green-400">
+                  <p className="font-medium">Message sent successfully!</p>
+                  <p className="text-sm text-green-300">Thank you for reaching out. I'll get back to you soon.</p>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400">
+                  <p className="font-medium">Failed to send message</p>
+                  <p className="text-sm text-red-300">Please try again or contact me directly via email.</p>
+                </div>
+              )}
+
               <div>
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Name
@@ -193,10 +239,15 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 group"
+                disabled={isSubmitting}
+                className={`w-full px-8 py-3 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 group ${
+                  isSubmitting 
+                    ? 'bg-gray-600 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700'
+                } text-white`}
               >
-                <Send size={20} className="group-hover:translate-x-1 transition-transform" />
-                Send Message
+                <Send size={20} className={isSubmitting ? '' : 'group-hover:translate-x-1 transition-transform'} />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
