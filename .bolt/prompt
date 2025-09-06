@@ -1,0 +1,422 @@
+import Spline from '@splinetool/react-spline/next';
+
+export default function Home() {
+  return (
+    <main>
+      <Spline
+        scene="https://prod.spline.design/9rsQUxKv5dSR7-Lt/scene.splinecode" 
+      />
+    </main>
+  );
+}
+
+
+this is the spline 3d next.js ebedding 3d desgin. code written in next.js want to use it on my webstite
+
+
+glassmorphism floating 3d element black background white text glasmorphism design
+
+
+add this in above prompt with all the details
+
+content on website: 
+
+YSS
+About
+Skills
+Experience
+Projects
+Education
+Leadership
+Contact
+
+Resume
+Hi, I'm Yashraj Singh
+Sisodiya
+Graduated AI Automation Engineer | DevOps & Cloud Enthusiast | B.Tech CSE, SVVV Indore
+
+I specialize in designing AI-powered workflows using N8n, integrating LLM APIs (Gemini, OpenAI) with cloud platforms (Google Cloud, AWS), and have a strong foundation in DevOps and automation logic. My experience includes internships at DesiredSoft and leadership roles in tech clubs.
+
+I'm passionate about contributing to AI agent development and process automation, bringing innovative solutions to complex technical challenges.
+
+Let's Connect
+View Projects
+AI Automation
+Cloud & DevOps
+LLM Integration
+> Initializing AI Automation Systems...
+> Cloud Infrastructure: Ready ✓
+> DevOps Pipeline: Active ✓
+> LLM APIs: Connected ✓
+Technical Skills
+A comprehensive toolkit for AI automation, cloud infrastructure, and DevOps excellence
+
+Automation & Orchestration
+N8n (project experience)
+Make.com (familiar)
+Zapier (familiar)
+AI / LLM & APIs
+Gemini API
+OpenAI API
+Prompt Engineering
+Workflow Integration
+Cloud Platforms
+Google Cloud Platform
+AWS
+Deployment
+Storage & Compute Services
+DevOps & Tools
+Docker
+Jenkins
+Git
+Linux
+Terraform
+Languages & Web
+Python
+REST APIs
+Webhooks
+JSON
+Data Mapping
+Other
+CI/CD Pipelines
+API Integration
+Testing
+Documentation
+Proficiency Levels
+N8n Automation
+90%
+Cloud Platforms
+85%
+DevOps Tools
+80%
+AI/LLM APIs
+88%
+Professional Experience
+Real-world experience in cloud infrastructure, DevOps practices, and automation
+
+AWS Cloud & DevOps Intern
+DesiredSoft Internet & Software Solution Pvt. Ltd.
+Feb 2025 – May 2025
+Remote
+Assisted in building and optimizing CI/CD pipelines for application deployment on AWS
+Troubleshooting Docker container issues, improving build stability and reducing deployment errors
+Collaborated with the DevOps team to manage AWS services and ensure smooth workflow integration
+AWS
+CI/CD
+Docker
+DevOps
+Pipeline Optimization
+Key Achievements
+50%
+Reduction in deployment time through CI/CD optimization
+
+25%
+Improvement in system reliability through containerization
+
+100%
+Successful completion of real-world cloud projects
+
+Featured Projects
+Real-world applications demonstrating AI automation, DevOps excellence, and cloud infrastructure
+
+AI News & Job Automation
+Personal Project
+Active
+AI News & Job Automation
+N8n Automation Workflow
+Automated daily collection of latest AI news (past 24h) and India-based job postings for 'DevOps Intern' and 'AI Automation Intern.' Complete workflow with Cron trigger, Perplexity AI API integration, HTML email formatting with CSS, and automated delivery.
+
+Key Features:
+Cron trigger for daily automation
+Perplexity AI API integration
+HTML email with CSS formatting
+Automated job posting collection
+Daily AI news aggregation
+Technologies:
+N8n
+Perplexity AI API
+HTML/CSS
+Email Services
+Cron Jobs
+View Details
+Source Code
+CI/CD & Deployment Pipeline
+Infrastructure Project
+Completed
+CI/CD & Deployment Pipeline
+To-Do List & 2048 Game
+Built comprehensive CI/CD pipeline using Jenkins, Docker, GitHub, and AWS for Node.js applications. Implemented automated build, test, and deployment steps with GitHub webhooks, achieving 50% reduction in deployment time and 25% improvement in system reliability.
+
+Key Features:
+Automated build and test processes
+GitHub webhooks integration
+Docker containerization
+AWS deployment automation
+Performance monitoring
+Technologies:
+Jenkins
+Docker
+GitHub
+AWS
+Node.js
+CI/CD
+View Details
+Source Code
+Project Impact
+50%
+Deployment Time Reduction
+
+25%
+System Reliability Improvement
+
+100%
+Automation Success Rate
+
+Educational Journey
+Building a strong foundation in computer science and engineering excellence
+
+Bachelor of Technology
+Computer Science & Engineering
+
+Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore
+2021 - June 2025
+Graduated
+Higher Secondary
+Science
+
+Ascent Public High School
+2021
+Completed
+Secondary School
+All Subjects
+
+Ascent Public High School
+2019
+Completed
+Academic Highlights
+Technical Leadership
+Led multiple technical clubs and organized tech events
+
+Project Excellence
+Developed real-world applications and automation systems
+
+Industry Experience
+Completed internships at leading tech companies
+
+Learning Philosophy
+"Education is not just about acquiring knowledge, but about developing the ability to think critically, solve complex problems, and continuously adapt to emerging technologies. My journey has been focused on building a strong foundation while staying current with industry trends."
+
+Leadership & Activities
+Leading technical communities, organizing impactful events, and mentoring the next generation of developers
+
+Current
+Club Head
+MLSA Club
+Jan 15, 2024 - Present
+Organize workshops and events on Microsoft tools & cloud technologies
+
+Key Achievements:
+Organized 10+ workshops on Microsoft Azure and cloud technologies
+Led a team of 15+ members in technical initiatives
+Increased club engagement by 300% through innovative events
+Established partnerships with local tech companies
+Completed
+Technical Lead → Club Secretary
+Abhyudaya Coding Club
+Dec 2023 - May 2025
+Led technical projects, hackathons, and mentored juniors
+
+Key Achievements:
+Developed College NOT App for student notifications
+Created Bus Tracking App for campus transportation
+Built College Jagat App for campus information
+Mentored 50+ junior students in programming
+Completed
+Cloud Lead
+GDSC Club
+Jun 2023 - Aug 2024
+Hosted hands-on GCP sessions, delivered Google Cloud & AI talks
+
+Key Achievements:
+Conducted 20+ hands-on Google Cloud Platform sessions
+Delivered technical talks on AI and machine learning
+Organized Google Developer events and workshops
+Built community of 100+ cloud enthusiasts
+Projects Delivered
+College NOTE App
+Student notification system for college announcements
+
+500+ active users
+Bus Tracking App
+Real-time campus transportation tracking
+
+80% reduction in wait times
+College Jagat App
+Comprehensive campus information platform
+
+90% student adoption rate
+Leadership Impact
+100+
+Students Mentored
+
+10+
+Events Organized
+
+3
+Major Apps Developed
+
+Let's Connect
+Ready to collaborate on AI automation, DevOps, or cloud projects? Let's discuss how we can work together.
+
+Get in Touch
+I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and innovation. Feel free to reach out through any of the channels below.
+
+Email
+
+theyashsisodiya@gmail.com
+
+Phone
+
++91-7389022061
+
+GitHub
+
+github.com/theyashsisodiya
+
+LinkedIn
+
+linkedin.com/in/theyashsisodiya
+
+Ready to Collaborate?
+Whether it's AI automation, cloud architecture, or DevOps optimization, I'm excited to bring innovative solutions to your next project.
+
+Let's start the conversation!
+Send a Message
+Name
+Your Name
+Email
+your@email.com
+Subject
+Project Collaboration
+Message
+Tell me about your project or what you'd like to discuss...
+Send Message
+Yashraj Singh Sisodiya
+AI Automation Engineer passionate about DevOps, Cloud Technologies, and building innovative solutions that make a difference.
+
+Building the future, one automation at a time
+Quick Links
+About
+Skills
+Experience
+Projects
+Education
+Leadership
+Contact
+Specializations
+• AI Automation & N8n
+• Cloud Platforms (GCP, AWS)
+• DevOps & CI/CD
+• LLM API Integration
+• Technical Leadership
+Get in Touch
+Email: theyashsisodiya@gmail.com
+Phone: +91-7389022061
+Location: Indore, India
+Let's connect and build something amazing together!
+© 2025 Yashraj Singh Sisodiya. Made with
+and lots of
+Crafted with React, TypeScript & Tailwind CSS
+
+
+add more project: 
+
+---
+
+### Personal Project
+
+**Active**
+**YouTube Video Summarizer & Transcriber**
+**N8n Automation Workflow**
+Built an automation that accepts YouTube video links (max 30 mins), generates both **summaries** and **full transcripts** in English, and automatically logs results into Google Sheets.
+
+**Key Features:**
+
+* Form-triggered YouTube link submission
+* AI-based transcription & summarization (English-only)
+* Dual output: structured summary + full transcript
+* Automated storage in Google Sheets
+
+**Technologies:**
+N8n • Google Gemini API • Google Sheets API • Automation Triggers
+
+\[View Details] | \[Source Code]
+add this link in both : https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing
+---
+
+### Personal Project
+
+**Active**
+**Bakery Data Analytics Assistant**
+**N8n Automation Workflow**
+Created an intelligent workflow for bakery sales analytics using Google Sheets. The workflow analyzes sales data via AI, generates structured insights, and provides decision-ready summaries for inventory and trends.
+
+**Key Features:**
+
+* Automated retrieval of bakery sales data from Google Sheets
+* AI-powered analytics with Azure OpenAI
+* Clear, concise responses with structured breakdowns
+* Supports trend identification, stock insights, and anomaly detection
+
+**Technologies:**
+N8n • Google Sheets API • Azure OpenAI API • AI Agent Orchestration
+
+\[View Details] | \[Source Code]
+add this link in both : https://drive.google.com/file/d/1qpJznf6sTAIJMOr-1r5CUnhtPHN5xTq9/view?usp=drive_link
+---
+
+### Personal Project
+
+**Active**
+**AI Daily News Aggregator (24-Hour Updates)**
+**N8n Automation Workflow**
+Automated daily collection of the latest AI news published in the past 24 hours. Generates a styled HTML email with headlines, summaries, and links, then delivers it via Gmail to subscribers.
+
+**Key Features:**
+
+* Daily schedule trigger
+* AI-powered real-time news retrieval with Perplexity API
+* Self-contained HTML email with inline CSS styling
+* Automated Gmail delivery to multiple recipients
+
+**Technologies:**
+N8n • Perplexity AI API • Gmail API • HTML/CSS • Cron Jobs
+
+\[View Details] | \[Source Code]
+add this link in both : 
+---
+
+### Personal Project
+
+**Active**
+**ATS-Friendly Resume Maker**
+**N8n Automation Workflow**
+Developed a workflow that tailors resumes according to job descriptions and outputs **ATS-optimized resumes** in both HTML and PDF. Users upload their resume and job description (JD), and the workflow merges, customizes, and stores the final version in Google Drive.
+
+**Key Features:**
+
+* Form-triggered resume + JD upload (PDF/Text)
+* Automated PDF text extraction & content merging
+* AI-powered resume tailoring with ATS optimization
+* Clean HTML formatting with inline CSS
+* Conversion to PDF and automatic upload to Google Drive
+
+**Technologies:**
+N8n • Perplexity AI • Google Drive API • CustomJS (HTML-to-PDF) • Automation Triggers
+
+\[View Details] | \[Source Code]
+add this link in both : https://drive.google.com/file/d/1cARHFNvrVFXpV31cv7CZV-N_O0TXQT-K/view?usp=drive_link
+
+---
+
+✨ Would you like me to **design a clean portfolio page layout (in Markdown or HTML)** so you can directly embed these projects on your website/portfolio?
