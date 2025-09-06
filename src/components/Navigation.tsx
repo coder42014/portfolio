@@ -55,7 +55,9 @@ const Navigation = () => {
                 </button>
               ))}
               <a
-                href="/resume"
+                href="https://drive.google.com/file/d/10niu8u-RzQ9IEnKo2gW-2xxF6jMIOBcG/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
               >
                 Resume
@@ -88,7 +90,9 @@ const Navigation = () => {
                 </button>
               ))}
               <a
-                href="/resume"
+                href="https://drive.google.com/file/d/10niu8u-RzQ9IEnKo2gW-2xxF6jMIOBcG/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
               >
                 Resume
