@@ -1,7 +1,7 @@
 import React from 'react';
 import { Code, Cloud, Cpu, Zap } from 'lucide-react';
 
-const About = () => {
+const About = React.memo(() => {
   const highlights = [
     {
       icon: <Zap className="text-blue-400" size={24} />,
@@ -98,6 +98,8 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Spline from '@splinetool/react-spline';
 import { ArrowDown, Github, Linkedin, Mail, Phone } from 'lucide-react';
 
@@ -14,7 +14,12 @@ const Hero = () => {
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* 3D Spline Background */}
       <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/9rsQUxKv5dSR7-Lt/scene.splinecode" />
+        <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>}>
+          <Spline 
+            scene="https://prod.spline.design/9rsQUxKv5dSR7-Lt/scene.splinecode"
+            style={{ width: '100%', height: '100%' }}
+          />
+        </Suspense>
       </div>
 
       {/* Dark overlay for better text readability */}
