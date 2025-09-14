@@ -1,16 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import LoadingSpinner from './components/LoadingSpinner';
-
-// Lazy load non-critical components
-const About = lazy(() => import('./components/About'));
-const Skills = lazy(() => import('./components/Skills'));
-const Experience = lazy(() => import('./components/Experience'));
-const Projects = lazy(() => import('./components/Projects'));
-const Education = lazy(() => import('./components/Education'));
-const Leadership = lazy(() => import('./components/Leadership'));
-const Contact = lazy(() => import('./components/Contact'));
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Leadership from './components/Leadership';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -26,27 +23,13 @@ function App() {
       <div className="relative z-10">
         <Navigation />
         <Hero />
-        <Suspense fallback={<LoadingSpinner />}>
-          <About />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Skills />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Experience />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Education />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Leadership />
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Contact />
-        </Suspense>
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Leadership />
+        <Contact />
       </div>
     </div>
   );
