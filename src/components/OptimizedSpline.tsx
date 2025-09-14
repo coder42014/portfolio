@@ -2,7 +2,8 @@ import React, { Suspense, memo } from 'react';
 import { useDeviceDetection } from '../hooks/useDeviceDetection';
 
 // Lazy load Spline only when needed
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
+const Spline = React.lazy(() => import('@splinetool/react-spline/next'));
+
 
 interface OptimizedSplineProps {
   scene: string;
