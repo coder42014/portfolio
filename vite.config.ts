@@ -32,7 +32,7 @@ export default defineConfig({
     sourcemap: false
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', '@studio-freight/lenis'],
+    include: ['react', 'react-dom', '@studio-freight/lenis', 'lodash-es'],
     exclude: ['@splinetool/react-spline']
   },
   server: {
