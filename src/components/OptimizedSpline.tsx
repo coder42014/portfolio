@@ -1,22 +1,8 @@
 import React, { Suspense, memo } from 'react';
 import { useDeviceDetection } from '../hooks/useDeviceDetection';
-import { ErrorBoundary } from 'react-error-boundary';
-
-return (
-  <ErrorBoundary fallback={<div>3D scene failed to load.</div>}>
-    <Suspense fallback={<SplineFallback />}>
-      <Spline 
-        scene={scene}
-        className={className}
-        style={{ width: '100%', height: '100%' }}
-      />
-    </Suspense>
-  </ErrorBoundary>
-);
 
 // Lazy load Spline only when needed
-const Spline = React.lazy(() => import('@splinetool/react-spline/next'));
-
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 interface OptimizedSplineProps {
   scene: string;

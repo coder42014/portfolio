@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
-import { debounce } from 'lodash-es';
+
 export const useLenis = () => {
   const lenisRef = useRef<Lenis | null>(null);
 
