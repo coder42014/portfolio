@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { ExternalLink, Github, Zap, BarChart3, FileText, Newspaper, FileCheck } from 'lucide-react';
 
-const Projects = React.memo(() => {
-  const projects = useMemo(() => [
+const Projects = () => {
+  const projects = [
     {
       icon: <Newspaper className="text-blue-400" size={32} />,
       title: "AI News & Job Automation",
@@ -86,13 +86,13 @@ const Projects = React.memo(() => {
       demoLink: "#",
       sourceLink: "#"
     }
-  ], []);
+  ];
 
-  const stats = useMemo(() => [
+  const stats = [
     { value: "50%", label: "Deployment Time Reduction" },
     { value: "25%", label: "System Reliability Improvement" },
     { value: "100%", label: "Automation Success Rate" }
-  ], []);
+  ];
 
   return (
     <section id="projects" className="py-20 relative">
@@ -110,7 +110,7 @@ const Projects = React.memo(() => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 will-change-transform"
+              className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-4">
@@ -197,8 +197,6 @@ const Projects = React.memo(() => {
       </div>
     </section>
   );
-});
-
-Projects.displayName = 'Projects';
+};
 
 export default Projects;

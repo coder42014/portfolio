@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, Github, Linkedin, Send, MapPin, Heart, Coffee } from 'lucide-react';
 
-const Contact = React.memo(() => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,7 +12,7 @@ const Contact = React.memo(() => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -45,14 +45,14 @@ const Contact = React.memo(() => {
     } finally {
       setIsSubmitting(false);
     }
-  }, [formData]);
+  }
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-  }, [formData]);
+  };
 
   const contactInfo = [
     {
@@ -315,8 +315,6 @@ const Contact = React.memo(() => {
       </div>
     </section>
   );
-});
-
-Contact.displayName = 'Contact';
+};
 
 export default Contact;

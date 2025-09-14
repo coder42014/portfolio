@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin, Award } from 'lucide-react';
 
-const Experience = React.memo(() => {
+const Experience = () => {
   const achievements = [
     { value: "50%", label: "Reduction in deployment time through CI/CD optimization" },
     { value: "25%", label: "Improvement in system reliability through containerization" },
@@ -102,8 +102,6 @@ const Experience = React.memo(() => {
       </div>
     </section>
   );
-});
-
-Experience.displayName = 'Experience';
+};
 
 export default Experience;
