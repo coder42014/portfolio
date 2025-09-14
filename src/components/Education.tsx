@@ -1,7 +1,7 @@
 import React from 'react';
 import { GraduationCap, Calendar, Award, BookOpen } from 'lucide-react';
 
-const Education = () => {
+const Education = React.memo(() => {
   const education = [
     {
       degree: "Bachelor of Technology",
@@ -116,6 +116,8 @@ const Education = () => {
       </div>
     </section>
   );
-};
+});
+
+Education.displayName = 'Education';
 
 export default Education;

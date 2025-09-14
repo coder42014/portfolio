@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Zap, Cloud, Code, Settings, Database, Globe } from 'lucide-react';
+import { useDeviceDetection } from '../hooks/useDeviceDetection';
 
-const Skills = () => {
+const Skills = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { isMobile, prefersReducedMotion } = useDeviceDetection();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.querySelector('#skills');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const skillCategories = [
     {
       icon: <Zap className="text-blue-400" size={24} />,
@@ -58,7 +80,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              className={`p-4 sm:p-6 rounded-xl bg-white/5 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-md'} border border-white/10 hover:bg-white/10 transition-all duration-300 will-change-transform hover:scale-105`}
             >
               <div className="flex items-center mb-4">
                 {category.icon}
@@ -87,8 +109,11 @@ const Skills = () => {
                 </div>
                 <div className="w-full bg-gray-800 rounded-full h-2">
                   <div 
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${item.level}%` }}
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out will-change-transform"
+                    style={{ 
+                      width: (isVisible && !prefersReducedMotion) ? `${item.level}%` : '0%',
+                      transform: 'translateZ(0)'
+                    }}
                   ></div>
                 </div>
               </div>
@@ -98,6 +123,8 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
+
+Skills.displayName = 'Skills';
 
 export default Skills;

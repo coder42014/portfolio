@@ -1,7 +1,10 @@
 import React from 'react';
 import { Code, Cloud, Cpu, Zap } from 'lucide-react';
+import { useDeviceDetection } from '../hooks/useDeviceDetection';
 
-const About = () => {
+const About = React.memo(() => {
+  const { isMobile } = useDeviceDetection();
+
   const highlights = [
     {
       icon: <Zap className="text-blue-400" size={24} />,
@@ -40,7 +43,7 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div className={`p-6 sm:p-8 rounded-2xl bg-white/5 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-md'} border border-white/10 hover:bg-white/10 transition-all duration-300 will-change-transform hover:scale-105`}>
               <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 I'm a graduated AI Automation Engineer with a strong foundation in DevOps and Cloud Technologies. 
@@ -53,7 +56,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div className={`p-6 sm:p-8 rounded-2xl bg-white/5 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-md'} border border-white/10 hover:bg-white/10 transition-all duration-300 will-change-transform hover:scale-105`}>
               <h3 className="text-2xl font-bold text-white mb-4">What I Do</h3>
               <p className="text-gray-300 leading-relaxed">
                 I specialize in creating intelligent automation workflows that bridge the gap between AI capabilities 
@@ -67,7 +70,7 @@ const About = () => {
             {highlights.map((item, index) => (
               <div 
                 key={index}
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                className={`p-4 sm:p-6 rounded-xl bg-white/5 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-md'} border border-white/10 hover:bg-white/10 transition-all duration-300 will-change-transform hover:scale-105`}
               >
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
@@ -78,7 +81,7 @@ const About = () => {
         </div>
 
         <div className="text-center">
-          <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-sm border border-white/10">
+          <div className={`inline-flex flex-wrap items-center gap-4 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-600/20 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-md'} border border-white/10 will-change-transform hover:scale-105 transition-transform duration-300`}>
             <div className="text-center">
               <div className="text-3xl font-bold text-white">100+</div>
               <div className="text-sm text-gray-400">Students Mentored</div>
@@ -98,6 +101,8 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;
