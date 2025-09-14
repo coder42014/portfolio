@@ -1,7 +1,7 @@
 import React from 'react';
 import { Users, Trophy, Target, Calendar, MapPin } from 'lucide-react';
 
-const Leadership = () => {
+const Leadership = React.memo(() => {
   const roles = [
     {
       title: "Club Head",
@@ -172,6 +172,8 @@ const Leadership = () => {
       </div>
     </section>
   );
-};
+});
+
+Leadership.displayName = 'Leadership';
 
 export default Leadership;
