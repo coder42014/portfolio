@@ -21,6 +21,23 @@ const Projects = React.memo(() => {
       sourceLink: "https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing"
     },
     {
+      icon: <FileCheck className="text-emerald-400" size={32} />,
+      title: "Invoice Data Extraction & Automation System",
+      category: "N8n Automation Workflow",
+      status: "Active",
+      description: "Developed an intelligent workflow to extract, validate, and store invoice data from uploaded invoice images/PDFs. The system ensures structured JSON formatting, prevents duplicate entries, and automates storage in Google Sheets, with integrated email notifications for success, duplicates, or errors.",
+      features: [
+        "AI-powered invoice data extraction using Google Gemini (Vision + LLM)",
+        "Automatic JSON structuring with mandatory field validation",
+        "Duplicate detection in Google Sheets with conditional logic",
+        "Secure invoice file archiving in Google Drive",
+        "Automated Gmail alerts for successful entries, duplicates, and missing fields"
+      ],
+      technologies: ["N8n", "Google Gemini API", "Google Sheets API", "Google Drive API", "Gmail API", "CustomJS (Data Validation & Transformation)", "Automation Triggers"],
+      demoLink: "https://n8n.io/workflows/8548-extract-and-process-invoices-with-gemini-ai-google-sheets-and-gmail-notifications/",
+      sourceLink: "https://n8n.io/workflows/8548-extract-and-process-invoices-with-gemini-ai-google-sheets-and-gmail-notifications/"
+    },
+    {
       icon: <FileText className="text-purple-400" size={32} />,
       title: "YouTube Video Summarizer & Transcriber",
       category: "N8n Automation Workflow",
