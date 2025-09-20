@@ -17,8 +17,8 @@ const Projects = React.memo(() => {
         "Daily AI news aggregation"
       ],
       technologies: ["N8n", "Perplexity AI API", "HTML/CSS", "Email Services", "Cron Jobs"],
-      demoLink: "https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing",
-      sourceLink: "https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing"
+      demoLink: "https://n8n.io/workflows/8346-daily-ai-news-digest-with-perplexity-ai-and-gmail-automation/",
+      sourceLink: "https://n8n.io/workflows/8346-daily-ai-news-digest-with-perplexity-ai-and-gmail-automation/"
     },
     {
       icon: <FileCheck className="text-emerald-400" size={32} />,
@@ -50,8 +50,8 @@ const Projects = React.memo(() => {
         "Automated storage in Google Sheets"
       ],
       technologies: ["N8n", "Google Gemini API", "Google Sheets API", "Automation Triggers"],
-      demoLink: "https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing",
-      sourceLink: "https://drive.google.com/file/d/1xpxQ-YsZpIlkG8HVSo6NmxUEqVdvvX5D/view?usp=sharing"
+      demoLink: "https://n8n.io/workflows/8670-youtube-video-summarizer-with-gemini-ai-to-whatsapp-telegram-and-google-sheets/",
+      sourceLink: "https://n8n.io/workflows/8670-youtube-video-summarizer-with-gemini-ai-to-whatsapp-telegram-and-google-sheets/"
     },
     {
       icon: <BarChart3 className="text-green-400" size={32} />,
@@ -66,8 +66,8 @@ const Projects = React.memo(() => {
         "Supports trend identification, stock insights, and anomaly detection"
       ],
       technologies: ["N8n", "Google Sheets API", "Azure OpenAI API", "AI Agent Orchestration"],
-      demoLink: "https://drive.google.com/file/d/1qpJznf6sTAIJMOr-1r5CUnhtPHN5xTq9/view?usp=drive_link",
-      sourceLink: "https://drive.google.com/file/d/1qpJznf6sTAIJMOr-1r5CUnhtPHN5xTq9/view?usp=drive_link"
+      demoLink: "https://n8n.io/workflows/8344-analyze-bakery-sales-and-inventory-with-google-sheets-and-azure-gpt-chat-assistant/",
+      sourceLink: "https://n8n.io/workflows/8344-analyze-bakery-sales-and-inventory-with-google-sheets-and-azure-gpt-chat-assistant/"
     },
     {
       icon: <FileCheck className="text-orange-400" size={32} />,
@@ -83,8 +83,8 @@ const Projects = React.memo(() => {
         "Conversion to PDF and automatic upload to Google Drive"
       ],
       technologies: ["N8n", "Perplexity AI", "Google Drive API", "CustomJS (HTML-to-PDF)", "Automation Triggers"],
-      demoLink: "https://drive.google.com/file/d/1cARHFNvrVFXpV31cv7CZV-N_O0TXQT-K/view?usp=drive_link",
-      sourceLink: "https://drive.google.com/file/d/1cARHFNvrVFXpV31cv7CZV-N_O0TXQT-K/view?usp=drive_link"
+      demoLink: "https://n8n.io/workflows/7637-generate-job-specific-ats-resumes-with-perplexity-ai-and-pdf-export/",
+      sourceLink: "https://n8n.io/workflows/7637-generate-job-specific-ats-resumes-with-perplexity-ai-and-pdf-export/"
     },
     {
       icon: <Zap className="text-cyan-400" size={32} />,
