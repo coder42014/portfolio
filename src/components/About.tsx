@@ -1,7 +1,12 @@
 import React from 'react';
 import { Code, Cloud, Cpu, Zap } from 'lucide-react';
+import { useCountUp } from '../hooks/useCountUp';
 
 const About = React.memo(() => {
+  const { count: count100, elementRef: ref100 } = useCountUp({ end: 100 });
+  const { count: count10, elementRef: ref10 } = useCountUp({ end: 10 });
+  const { count: count3, elementRef: ref3 } = useCountUp({ end: 3 });
+
   const highlights = [
     {
       icon: <Zap className="text-blue-400" size={24} />,
@@ -79,18 +84,18 @@ const About = React.memo(() => {
 
         <div className="text-center">
           <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-sm border border-white/10">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">100+</div>
+            <div className="text-center" ref={ref100}>
+              <div className="text-3xl font-bold text-white">{count100}+</div>
               <div className="text-sm text-gray-400">Students Mentored</div>
             </div>
             <div className="w-px h-12 bg-white/20"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">10+</div>
+            <div className="text-center" ref={ref10}>
+              <div className="text-3xl font-bold text-white">{count10}+</div>
               <div className="text-sm text-gray-400">Projects Completed</div>
             </div>
             <div className="w-px h-12 bg-white/20"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">3</div>
+            <div className="text-center" ref={ref3}>
+              <div className="text-3xl font-bold text-white">{count3}</div>
               <div className="text-sm text-gray-400">Leadership Roles</div>
             </div>
           </div>

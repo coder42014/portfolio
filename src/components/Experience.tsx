@@ -1,11 +1,16 @@
 import React from 'react';
 import { Calendar, MapPin, Award } from 'lucide-react';
+import { useCountUp } from '../hooks/useCountUp';
 
 const Experience = React.memo(() => {
+  const { count: count50, elementRef: ref50 } = useCountUp({ end: 50 });
+  const { count: count25, elementRef: ref25 } = useCountUp({ end: 25 });
+  const { count: count100, elementRef: ref100 } = useCountUp({ end: 100 });
+
   const achievements = [
-    { value: "50%", label: "Reduction in deployment time through CI/CD optimization" },
-    { value: "25%", label: "Improvement in system reliability through containerization" },
-    { value: "100%", label: "Successful completion of real-world cloud projects" }
+    { value: "50%", label: "Reduction in deployment time through CI/CD optimization", count: count50, ref: ref50 },
+    { value: "25%", label: "Improvement in system reliability through containerization", count: count25, ref: ref25 },
+    { value: "100%", label: "Successful completion of real-world cloud projects", count: count100, ref: ref100 }
   ];
 
   return (
@@ -90,9 +95,10 @@ const Experience = React.memo(() => {
               <div 
                 key={index}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-center hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                ref={achievement.ref}
               >
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
-                  {achievement.value}
+                  {achievement.count}%
                 </div>
                 <p className="text-gray-400 text-sm">{achievement.label}</p>
               </div>

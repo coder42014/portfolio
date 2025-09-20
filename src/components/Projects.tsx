@@ -1,7 +1,12 @@
 import React, { useMemo } from 'react';
 import { ExternalLink, Github, Zap, BarChart3, FileText, Newspaper, FileCheck } from 'lucide-react';
+import { useCountUp } from '../hooks/useCountUp';
 
 const Projects = React.memo(() => {
+  const { count: count50, elementRef: ref50 } = useCountUp({ end: 50 });
+  const { count: count25, elementRef: ref25 } = useCountUp({ end: 25 });
+  const { count: count100, elementRef: ref100 } = useCountUp({ end: 100 });
+
   const projects = useMemo(() => [
     {
       icon: <Newspaper className="text-blue-400" size={32} />,
@@ -106,9 +111,9 @@ const Projects = React.memo(() => {
   ], []);
 
   const stats = useMemo(() => [
-    { value: "50%", label: "Deployment Time Reduction" },
-    { value: "25%", label: "System Reliability Improvement" },
-    { value: "100%", label: "Automation Success Rate" }
+    { value: "50%", label: "Deployment Time Reduction", count: count50, ref: ref50 },
+    { value: "25%", label: "System Reliability Improvement", count: count25, ref: ref25 },
+    { value: "100%", label: "Automation Success Rate", count: count100, ref: ref100 }
   ], []);
 
   return (
@@ -202,9 +207,10 @@ const Projects = React.memo(() => {
               <div 
                 key={index}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                ref={stat.ref}
               >
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
-                  {stat.value}
+                  {stat.count}%
                 </div>
                 <p className="text-gray-400">{stat.label}</p>
               </div>

@@ -1,7 +1,15 @@
 import React from 'react';
 import { Users, Trophy, Target, Calendar, MapPin } from 'lucide-react';
+import { useCountUp } from '../hooks/useCountUp';
 
 const Leadership = React.memo(() => {
+  const { count: count500, elementRef: ref500 } = useCountUp({ end: 500 });
+  const { count: count80, elementRef: ref80 } = useCountUp({ end: 80 });
+  const { count: count90, elementRef: ref90 } = useCountUp({ end: 90 });
+  const { count: count100, elementRef: ref100 } = useCountUp({ end: 100 });
+  const { count: count10, elementRef: ref10 } = useCountUp({ end: 10 });
+  const { count: count3, elementRef: ref3 } = useCountUp({ end: 3 });
+
   const roles = [
     {
       title: "Club Head",
@@ -51,24 +59,33 @@ const Leadership = React.memo(() => {
     {
       title: "College NOTE App",
       description: "Student notification system for college announcements",
-      impact: "500+ active users"
+      impact: "500+ active users",
+      count: count500,
+      ref: ref500,
+      suffix: "+ active users"
     },
     {
       title: "Bus Tracking App",
       description: "Real-time campus transportation tracking",
-      impact: "80% reduction in wait times"
+      impact: "80% reduction in wait times",
+      count: count80,
+      ref: ref80,
+      suffix: "% reduction in wait times"
     },
     {
       title: "College Jagat App",
       description: "Comprehensive campus information platform",
-      impact: "90% student adoption rate"
+      impact: "90% student adoption rate",
+      count: count90,
+      ref: ref90,
+      suffix: "% student adoption rate"
     }
   ];
 
   const stats = [
-    { value: "100+", label: "Students Mentored" },
-    { value: "10+", label: "Events Organized" },
-    { value: "3", label: "Major Apps Developed" }
+    { value: "100+", label: "Students Mentored", count: count100, ref: ref100, suffix: "+" },
+    { value: "10+", label: "Events Organized", count: count10, ref: ref10, suffix: "+" },
+    { value: "3", label: "Major Apps Developed", count: count3, ref: ref3, suffix: "" }
   ];
 
   return (
@@ -142,11 +159,12 @@ const Leadership = React.memo(() => {
               <div 
                 key={index}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                ref={project.ref}
               >
                 <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  {project.impact}
+                  {project.count}{project.suffix}
                 </div>
               </div>
             ))}
@@ -160,9 +178,10 @@ const Leadership = React.memo(() => {
               <div 
                 key={index}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                ref={stat.ref}
               >
                 <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
-                  {stat.value}
+                  {stat.count}{stat.suffix}
                 </div>
                 <p className="text-gray-400">{stat.label}</p>
               </div>
